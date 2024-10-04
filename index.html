@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of John Doe, showcasing skills, projects, and contact information.">
+    <meta name="author" content="John Doe">
+    <title>John Doe | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png"> <!-- Add favicon for better UX -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#hero" aria-label="Home section">Home</a></li>
+                <li><a href="#resume" aria-label="Resume section">Resume</a></li>
+                <li><a href="#projects" aria-label="Projects section">Projects</a></li>
+                <li><a href="#about-me" aria-label="About me section">About Me</a></li>
+                <li><a href="#contact" aria-label="Contact section">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Hello, I'm John Doe</h1>
+                <img src="profile.jpg" alt="Profile picture of John Doe" class="profile-img" loading="lazy"> <!-- Lazy-loaded image -->
+                <p>I'm a passionate Full-Stack Developer with expertise in Web Development, JavaScript, and Cloud Technologies.</p>
+                <a href="#contact" class="btn" aria-label="Get in touch with me">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section class="resume" id="resume">
+            <h2>Resume</h2>
+            <div class="resume-content">
+                <h3>Education</h3>
+                <p>Bachelor's in Computer Science from XYZ University, 2016-2020</p>
+
+                <h3>Work Experience</h3>
+                <p><strong>Software Engineer</strong> at TechCorp | 2020-2023</p>
+                <ul>
+                    <li>Led the development of a responsive e-commerce platform using React.js, increasing user engagement by 20%.</li>
+                    <li>Improved application performance by 30% by optimizing API calls and reducing load times using caching techniques.</li>
+                    <li>Integrated cloud-based services, such as AWS Lambda and S3, to enhance scalability and data storage efficiency.</li>
+                </ul>
+
+                <h3>Skills</h3>
+                <ul class="skills-list">
+                    <li>Proficiency in Web Development (HTML5, CSS3, JavaScript, React.js)</li>
+                    <li>Experience with Backend Technologies (Node.js, Express, MongoDB)</li>
+                    <li>Strong knowledge of Cloud Services (AWS, Azure, Docker, Kubernetes)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <article>
+                    <h3><a href="#">Portfolio Website</a></h3>
+                    <p>Developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills. Integrated a contact form using EmailJS for easy communication.</p>
+                </article>
+                <article>
+                    <h3><a href="#">E-Commerce Web App</a></h3>
+                    <p>Built an e-commerce platform using React and Node.js. Implemented payment gateway integration, user authentication, and product management features.</p>
+                </article>
+                <article>
+                    <h3><a href="#">Cloud-Based Chat App</a></h3>
+                    <p>Created a real-time chat application using WebSocket and Node.js, hosted on AWS with serverless architecture for scaling and cost-efficiency.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-me" id="about-me">
+            <h2>About Me</h2>
+            <p>I am a dedicated Full-Stack Developer with a passion for creating scalable web applications and leveraging cloud technologies to solve complex problems. In my free time, I enjoy learning about new programming languages, contributing to open-source projects, and exploring the world of DevOps.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <form action="https://api.emailjs.com/api/v1.0/email/send" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                
+                <button type="submit" class="btn">Send</button>
+            </form>
+            <div class="random-contacts">
+                <h3>Other Ways to Reach Me:</h3>
+                <ul>
+                    <li>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                    <li>Phone: <a href="tel:+1987654321">+1 (987) 654-321</a></li>
+                    <li>Phone: <a href="tel:+11234567890">+1 (123) 456-7890</a></li>
+                </ul>
+            </div>
+        </section>
+               
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
+        <ul class="footer-nav">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

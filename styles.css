@@ -1,0 +1,399 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 1.25rem; /* 20px equivalent */
+}
+
+/* Basic Layout */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+    background-color: #444;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    color: #f4b400;
+    outline: none;
+}
+
+nav ul li a:focus {
+    outline: 2px dashed #f4b400;
+    outline-offset: 4px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 6.25rem 1.25rem; /* 100px equivalent */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    max-width: 50rem; /* 800px equivalent */
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.625rem 1.25rem;
+    background-color: #f4b400;
+    color: #333;
+    text-transform: uppercase;
+    border-radius: 0.3125rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ffcc00;
+    transform: translateY(-2px);
+}
+
+.btn:focus {
+    outline: 2px dashed #ffcc00;
+    outline-offset: 4px;
+}
+
+/* Section Styling */
+section {
+    margin: 2.5rem 0;
+    padding: 1.875rem;
+    background-color: #fff;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-0.3125rem);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 9.375rem; /* 150px */
+    height: 9.375rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1.25rem;
+    object-fit: cover;
+}
+
+/* Projects Grid */
+.resume-content, .projects-grid {
+    max-width: 62.5rem; /* 1000px */
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr)); /* 250px */
+    gap: 1.25rem;
+}
+
+/* Project Article Background Image */
+.projects-grid article {
+    padding: 1.25rem;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border-radius: 0.5rem;
+    height: 15.625rem; /* 250px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+}
+
+.projects-grid article h3, .projects-grid article p {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+}
+
+.projects-grid article:hover {
+    transform: translateY(-0.625rem);
+}
+
+.projects-grid a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.projects-grid a:hover, .projects-grid a:focus {
+    text-decoration: underline;
+}
+
+/* Background images for projects */
+.projects-grid article:nth-child(1) {
+    background-image: url('project1.jpg');
+}
+
+.projects-grid article:nth-child(2) {
+    background-image: url('project2.jpg');
+}
+
+.projects-grid article:nth-child(3) {
+    background-image: url('project3.jpg');
+}
+
+/* About Me Section */
+.about-me {
+    text-align: center;
+    max-width: 50rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* Contact Section Styling */
+.contact {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 2rem; /* Padding around the section */
+    border-radius: 0.625rem; /* Rounded corners */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Deeper shadow for more depth */
+    margin: 2.5rem auto; /* Vertical spacing and center the section */
+    max-width: 600px; /* Maximum width for the contact section */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.contact:hover {
+    transform: translateY(-0.5rem); /* Lift effect on hover */
+}
+
+.contact h2 {
+    font-size: 2.5rem; /* Larger heading font size */
+    margin-bottom: 1.5rem; /* Space below the heading */
+    text-align: center; /* Centered text */
+    color: #333; /* Dark color for good readability */
+}
+
+.contact label {
+    font-weight: bold; /* Bold labels for emphasis */
+    margin-top: 1rem; /* Space above the label */
+    display: block; /* Block display for labels */
+    color: #444; /* Slightly lighter color than heading */
+}
+
+.contact input,
+.contact textarea {
+    width: 100%; /* Full-width inputs */
+    padding: 0.625rem; /* Padding inside the fields */
+    margin: 0.5rem 0; /* Vertical spacing between fields */
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 0.3125rem; /* Rounded corners */
+    font-size: 1rem; /* Base font size */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth border color and shadow transition */
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #f4b400; /* Highlight border color on focus */
+    box-shadow: 0 0 5px rgba(244, 180, 0, 0.5); /* Subtle glow effect */
+    outline: none; /* Remove default outline */
+}
+
+.contact button {
+    background-color: #f4b400; /* Button color */
+    color: #333; /* Text color */
+    padding: 0.625rem 1.25rem; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 0.3125rem; /* Rounded corners */
+    font-size: 1rem; /* Button text size */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Transition effects */
+    margin-top: 1rem; /* Space above button */
+    width: 100%; /* Full-width button */
+}
+
+.contact button:hover {
+    background-color: #ffcc00; /* Lighter color on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.contact button:focus {
+    outline: 2px dashed #ffcc00; /* Outline for accessibility */
+    outline-offset: 4px; /* Space between button and outline */
+}
+
+/* Additional Styles for Random Contacts */
+.random-contacts {
+    margin-top: 2rem; /* Space above the random contacts section */
+    text-align: center; /* Center the text */
+}
+
+.random-contacts h3 {
+    font-size: 1.5rem; /* Size for the subsection heading */
+    margin-bottom: 1rem; /* Space below the heading */
+    color: #333; /* Color for the heading */
+}
+
+.random-contacts ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.random-contacts li {
+    margin: 0.5rem 0; /* Space between each contact item */
+}
+
+.random-contacts a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition */
+    font-weight: bold; /* Bold link text */
+}
+
+.random-contacts a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 3.125rem;
+    padding: 1.25rem;
+    background-color: #444;
+    color: #fff;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+footer ul li a:hover, footer ul li a:focus {
+    color: #f4b400;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-3.125rem); /* 50px */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(3.125rem); /* 50px */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0.625rem; /* 10px */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 1.25rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Additional Media Query for Small Screens (Mobile) */
+@media (max-width: 480px) {
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .about-me, .contact p {
+        font-size: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+    
+    .random-contacts h3 {
+        font-size: 1.25rem; /* Adjust heading size for smaller screens */
+    }
+}
